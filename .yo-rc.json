@@ -1,0 +1,16 @@
+{
+  "generator-ui5-library": {
+    "libraryname": "myUI5Library",
+    "namespace": "com.myorg",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.95.0",
+    "author": "OpenUI5 Team",
+    "newdir": false,
+    "namespaceURI": "com/myorg",
+    "librarynamespace": "com.myorg.myUI5Library",
+    "librarynamespaceURI": "com/myorg/myUI5Library",
+    "librarybasepath": "../../../",
+    "frameworklowercase": "openui5",
+    "setupCompleted": true
+  }
+}

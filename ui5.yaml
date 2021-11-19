@@ -1,0 +1,23 @@
+specVersion: '2.2'
+metadata:
+  name: "myUI5Library"
+type: library
+resources:
+  configuration:
+    paths:
+      src: src-gen
+      test: test-gen
+framework:
+  name: OpenUI5
+  version: 1.95.0
+  libraries:
+    - name: sap.ui.core
+    - name: themelib_sap_belize
+    - name: themelib_sap_fiori_3
+server:
+  customMiddleware:
+  - name: ui5-middleware-livereload
+    afterMiddleware: compression
+    configuration:
+      extraExts: "xml,json,properties"
+      path: ["src-gen", "test-gen"]

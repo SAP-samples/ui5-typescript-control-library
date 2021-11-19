@@ -1,0 +1,57 @@
+{
+  "name": "ui5-typescript-control-library",
+  "version": "1.0.0",
+  "description": "Showcase of a TypeScript setup for developing UI5 control libraries",
+  "author": "SAP SE",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SAP-samples/ui5-typescript-control-library.git"
+  },
+  "scripts": {
+    "build": "run-s build:ts build:test-ts build:ui5",
+    "build:ts": "babel src --out-dir src-gen --extensions \".ts,.js\" --copy-files --include-dotfiles",
+    "build:test-ts": "babel test --out-dir test-gen --extensions \".ts,.js\" --copy-files --include-dotfiles",
+    "build:ui5": "ui5 build --clean-dest",
+    "watch": "run-p watch:controls watch:ts watch:test-ts start",
+    "watch:ts": "babel src --out-dir src-gen --extensions \".ts,.js\" --copy-files --include-dotfiles  --watch",
+    "watch:test-ts": "babel test --out-dir test-gen --extensions \".ts,.js\" --copy-files --include-dotfiles  --watch",
+    "watch:controls": "npx @ui5/ts-interface-generator --watch",
+    "start": "run-p watch:ts watch:test-ts start:ui5",
+    "start:ui5": "ui5 serve --open test-resources/com/myorg/myUI5Library/Example.html",
+    "testsuite": "ui5 serve --open test-resources/com/myorg/myUI5Library/qunit/testsuite.qunit.html",
+    "test": "karma start --browsers=ChromeHeadless --singleRun=true",
+    "ts-typecheck": "tsc --noEmit",
+    "lint:src": "eslint src",
+    "lint:test": "eslint test",
+    "lint": "run-s lint:src lint:test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jquery": "^3.5.1",
+    "@types/openui5": "^1.95.0",
+    "@types/qunit": "^2.5.4",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "@ui5/cli": "^2.9.3",
+    "@ui5/ts-interface-generator": "^0.1.2",
+    "babel-preset-transform-ui5": "^7.0.5",
+    "eslint": "^8.2.0",
+    "karma": "^6.1.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-cli": "^2.0.0",
+    "karma-ui5": "^2.3.3",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.4.4",
+    "ui5-middleware-livereload": "^0.5.8"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-livereload"
+    ]
+  }
+}
