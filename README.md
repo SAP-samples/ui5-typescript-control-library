@@ -2,6 +2,27 @@
 
 This repository demonstrates how to develop UI5 control libraries in TypeScript.
 
+## Table of Contents
+
+  * [Description](#description)
+  * [Requirements](#requirements)
+  * [Installation / Setup](#installation---setup)
+  * [Usage](#usage)
+  * [Things to Consider When Developing Control Libraries in TypeScript](#things-to-consider-when-developing-control-libraries-in-typescript)
+    + [TypeScript Transpilation](#typescript-transpilation)
+    + [tsconfig.json](#tsconfigjson)
+    + [ui5.yaml](#ui5yaml)
+    + [Control Implementation](#control-implementation)
+    + [library.ts](#libraryts)
+    + [ESLint](#eslint)
+    + [Tests](#tests)
+  * [Status](#status)
+  * [Known Issues](#known-issues)
+  * [How to obtain support](#how-to-obtain-support)
+  * [Contributing](#contributing)
+  * [Credits](#credits)
+  * [License](#license)
+
 ## Description
 
 This is an example UI5 control library, implemented in TypeScript, including tests, theme CSS files, a sample page for trying the control(s), and the entire needed tool setup including TypeScript transpilation, UI5 build, code linting etc.
