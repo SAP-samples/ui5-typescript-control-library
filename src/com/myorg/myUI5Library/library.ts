@@ -9,7 +9,7 @@ import ObjectPath from "sap/base/util/ObjectPath";
  */
 
 // delegate further initialization of this library to the Core
-// Hint: sap.ui.getCore() must still be used to support preload with sync bootstrap!
+// Hint: sap.ui.getCore() must still be used here to support preload with sync bootstrap!
 sap.ui.getCore().initLibrary({
 	name: "com.myorg.myUI5Library",
 	version: "${version}",

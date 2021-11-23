@@ -13,7 +13,7 @@ import { ExampleColor } from "./library";
  * Constructor for a new <code>com.myorg.myUI5Library.Example</code> control.
  *
  * Some class description goes here.
- * @extends sap.ui.core.Control
+ * @extends Control
  *
  * @author OpenUI5 Team 
  * @version ${version}

@@ -16,11 +16,10 @@ const ExampleRenderer = {
 	apiVersion: 2, // usage of DOM Patcher
 
 	/**
-	 * Renders the HTML for the given control, using the provided
-	 * {@link sap.ui.core.RenderManager}.
+	 * Renders the HTML for the given control, using the provided {@link RenderManager}.
 	 *
-	 * @param {sap.ui.core.RenderManager} rm The reference to the <code>sap.ui.core.RenderManager</code>
-	 * @param {sap.ui.core.Control} control The control instance to be rendered
+	 * @param {RenderManager} rm The reference to the <code>sap.ui.core.RenderManager</code>
+	 * @param {Example} control The control instance to be rendered
 	 */
 	render: function (rm: RenderManager, control: Example) {
 
