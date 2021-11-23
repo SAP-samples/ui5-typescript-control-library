@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/ui5-typescript-control-library)](https://api.reuse.software/info/github.com/SAP-samples/ui5-typescript-control-library)
+
 # ui5-typescript-control-library - a Sample UI5 Control Library Developed in TypeScript
 
 This repository demonstrates and explains how to develop UI5 control libraries in TypeScript.
