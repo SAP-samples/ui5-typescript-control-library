@@ -112,12 +112,7 @@ The "livereload" middleware for watch mode is also configured to work on these d
 
 General aspects of control development in TypeScript are also explained in the [`custom-controls` branch of the "Hello World" repository](https://github.com/SAP-samples/ui5-typescript-helloworld/tree/custom-controls).
 
-As explained there, an additional named export of the control must be added to let the generated interface with all the API accessor methods be merged by TypeScript, so the control needs to be exported twice:
-```ts
-export { Example }; // needed for merging the generated interface
-export default Example;
-```
-And one needs to manually copy the constructor signatures from the terminal output of the interface generator into the control implementation:
+As explained there, one needs to manually copy the constructor signatures from the terminal output of the interface generator into the control implementation:
 ```ts
 // The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures
 constructor(id?: string | $ExampleSettings);
@@ -141,7 +136,7 @@ In the `library.ts` file there is one thing to keep in mind:<br>
 In UI5 Libraries implemented in JavaScript, enums must be directly appended to the global namespace of the library. This is required by the UI5 runtime to find the enum type when used for control properties.<br>
 The same is also done here, but as the global object is not known by TypeScript, the object is first acquired using the [`ObjectPath` API](https://openui5.hana.ondemand.com/api/module:sap/base/util/ObjectPath#methods/sap/base/util/ObjectPath.get):
 ```js
-const thisLib = ObjectPath.get("com.myorg.myUI5Library");
+const thisLib : {[key: string]: unknown} = ObjectPath.get("com.myorg.myUI5Library") as {[key: string]: unknown};
 ```
 Then the enum is attached to this object:
 ```js

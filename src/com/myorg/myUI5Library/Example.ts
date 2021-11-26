@@ -64,6 +64,4 @@ class Example extends Control {
 	}
 }
 
-export { Example }; // needed for merging the generated interface
 export default Example;
-

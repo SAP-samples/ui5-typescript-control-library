@@ -13,7 +13,7 @@ declare module "./Example" {
         press?: (event: Event) => void;
     }
 
-    interface Example {
+    export default interface Example {
 
         // property: text
         getText(): string;

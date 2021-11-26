@@ -29,7 +29,7 @@ sap.ui.getCore().initLibrary({
 
 // get the library object from global object space because all enums must be attached to it to be usable as UI5 types
 // FIXME: this line is planned to become obsolete and may need to be removed later
-const thisLib = ObjectPath.get("com.myorg.myUI5Library");
+const thisLib : {[key: string]: unknown} = ObjectPath.get("com.myorg.myUI5Library") as {[key: string]: unknown};
 
 /**
  * Semantic Colors of the com.myorg.myUI5Library.Example control.
