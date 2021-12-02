@@ -164,7 +164,7 @@ If you don't want to simply use the control library in this repository as starti
 
 1. Add the `tsconfig.json` and `.babelrc.json` files to the root directory, with content like in this repository
 1. Add dependencies to the required type definitions, to the Babel transpiler and its UI5 plugin, and to the interface generator for controls:
-    * `npm install --save-dev typescript @types/openui5@1.95.0 @types/jquery@3.5.1 @types/qunit@2.5.4` (you can also use the [@sapui5/ts-types-esm](https://www.npmjs.com/package/@sapui5/ts-types-esm) types instead of the OpenUI5 ones when working with SAPUI5.)
+    * `npm install --save-dev typescript @types/openui5@1.96.0 @types/jquery@3.5.9 @types/qunit@2.5.4` (you can also use the [@sapui5/ts-types-esm](https://www.npmjs.com/package/@sapui5/ts-types-esm) types instead of the OpenUI5 ones when working with SAPUI5.)
     * `npm install --save-dev @babel/core @babel/cli @babel/preset-env`
     * `npm install --save-dev @babel/preset-typescript babel-preset-transform-ui5`
     * `npm install --save-dev @ui5/ts-interface-generator`
