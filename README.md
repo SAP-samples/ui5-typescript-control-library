@@ -127,6 +127,8 @@ As also explained in that other project, the namespace of the control needs to b
 
 Also in contrast to the custom control in that other project, the Renderer is implemented in a separate file, like it is typically done in the original UI5 libraries. But both options are equally valid. 
 
+Make sure to export the control class as default export and to do it immediately when the class is defined, otherwise you will run into trouble using the TSinterface generator.
+
 The following is not specific to TypeScript, but you may not be aware: at the beginning of the file, there is a `${copyright}` placeholder. When you don't remove it, it will be replaced during the UI5 build with content from the `.library` file.
 
 
@@ -200,7 +202,7 @@ If you don't want to simply use the control library in this repository as starti
       /**
        * @name com.myorg.myUI5Library.Example
        */
-      class Example extends Control {
+      export default class Example extends Control {
         static readonly metadata = { ... }
         onclick = () => {
 	        ...
