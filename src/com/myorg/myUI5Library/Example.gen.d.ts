@@ -1,5 +1,6 @@
 import { ExampleColor } from "com/myorg/myUI5Library/library";
 import Event from "sap/ui/base/Event";
+import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 import { $ControlSettings } from "sap/ui/core/Control";
 
 declare module "./Example" {
@@ -8,8 +9,8 @@ declare module "./Example" {
      * Interface defining the settings object used in constructor calls
      */
     interface $ExampleSettings extends $ControlSettings {
-        text?: string;
-        color?: ExampleColor;
+        text?: string | PropertyBindingInfo;
+        color?: ExampleColor | PropertyBindingInfo | `{${string}}`;
         press?: (event: Event) => void;
     }
 

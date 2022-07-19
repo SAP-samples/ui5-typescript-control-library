@@ -32,11 +32,11 @@
     "@babel/core": "^7.17.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
-    "@types/openui5": "1.100.0",
+    "@types/openui5": "1.104.0",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "@ui5/cli": "^2.14.7",
-    "@ui5/ts-interface-generator": "^0.4.2",
+    "@ui5/ts-interface-generator": "^0.5.0",
     "babel-preset-transform-ui5": "^7.0.5",
     "eslint": "^8.12.0",
     "karma": "^6.3.17",
@@ -45,7 +45,7 @@
     "karma-ui5": "^2.4.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^4.6.3",
-    "ui5-middleware-livereload": "^0.5.9"
+    "ui5-middleware-livereload": "^0.6.0"
   },
   "ui5": {
     "dependencies": [
