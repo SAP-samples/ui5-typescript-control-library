@@ -16,6 +16,7 @@ This repository demonstrates and explains how to develop UI5 control libraries i
     + [ui5.yaml](#ui5yaml)
     + [Control Implementation](#control-implementation)
     + [library.ts](#libraryts)
+    + [Usage in Non-TypeScript Applications](#usage-in-non-typescript-applications)
     + [ESLint](#eslint)
     + [Tests](#tests)
   * [How to Convert a Library to TypeScript](#how-to-convert-a-library-to-typescript)
