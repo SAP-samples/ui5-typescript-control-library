@@ -29,7 +29,7 @@ export default class Example extends Control {
 	constructor(id?: string, settings?: $ExampleSettings);
 	constructor(id?: string, settings?: $ExampleSettings) { super(id, settings); }
 
-	static readonly metadata = {
+	static readonly metadata: object = {
 		library: "com.myorg.myUI5Library",
 		properties: {
 			/**
