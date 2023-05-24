@@ -12,7 +12,10 @@ function triggerClickEvent(control: Control) {
 	const oEvent = jQuery.Event("click");
 	oEvent.offsetX = 1;
 	oEvent.offsetY = 1;
-	jQuery(control.getDomRef()).trigger(oEvent);
+	const domRef = control.getDomRef();
+	if (domRef) {
+		jQuery().trigger(oEvent);
+	}
 }
 
 // module for basic checks

@@ -3,7 +3,7 @@
  */
 
 // Provides control com.myorg.myUI5Library.Example.
-import Control from	"sap/ui/core/Control";
+import Control from "sap/ui/core/Control";
 import ExampleRenderer from "./ExampleRenderer";
 import { ExampleColor } from "./library";
 

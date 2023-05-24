@@ -179,7 +179,7 @@ If you don't want to simply use the control library in this repository as starti
 
 1. Add the `tsconfig.json` and `.babelrc.json` files to the root directory, with content like in this repository
 1. Add dependencies to the required type definitions, to the Babel transpiler and its UI5 plugin, and to the interface generator for controls:
-    * `npm install --save-dev typescript @types/openui5@1.104.0` (You can use the [@sapui5/ts-types-esm](https://www.npmjs.com/package/@sapui5/ts-types-esm) types instead of the OpenUI5 ones when working with SAPUI5. In case the jQuery/QUnit type versions coming with the UI5 types don't match well enough, you can additionally npm install e.g. `@types/jquery@3.5.9` and `@types/qunit@2.5.4`.)
+    * `npm install --save-dev typescript @types/openui5@1.114.0` (You can use the [@sapui5/types](https://www.npmjs.com/package/@sapui5/types) types instead of the OpenUI5 ones when working with SAPUI5. In case the jQuery/QUnit type versions coming with the UI5 types don't match well enough, you can additionally npm install e.g. `@types/jquery@3.5.9` and `@types/qunit@2.5.4`.)
     * `npm install --save-dev @babel/core @babel/cli @babel/preset-env`
     * `npm install --save-dev @babel/preset-typescript babel-preset-transform-ui5`
     * `npm install --save-dev @ui5/ts-interface-generator`
@@ -197,7 +197,7 @@ If you don't want to simply use the control library in this repository as starti
       ```
       needs to be converted to:
       ```ts
-      import Control from	"sap/ui/core/Control";
+      import Control from "sap/ui/core/Control";
       import ExampleRenderer from "./ExampleRenderer";
       import { ExampleColor } from "./library";
       ```
@@ -269,4 +269,4 @@ If you wish to contribute code, offer fixes or improvements, please send a pull 
 This project has been generated with 💙 and [generator-ui5-library](https://github.com/geert-janklaps/generator-ui5-library) and then adapted to TypeScript.
 
 ## License
-Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
+Copyright (c) 2021-2023 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
