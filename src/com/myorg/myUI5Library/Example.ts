@@ -6,7 +6,7 @@
 import Control from "sap/ui/core/Control";
 import ExampleRenderer from "./ExampleRenderer";
 import { ExampleColor } from "./library";
-import { MetadataOptions } from "sap/ui/core/Element";
+import type { MetadataOptions } from "sap/ui/core/Element";
 
 
 /**
