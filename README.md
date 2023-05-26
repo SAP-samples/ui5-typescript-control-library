@@ -121,8 +121,13 @@ constructor(id?: string, settings?: $ExampleSettings);
 constructor(id?: string, settings?: $ExampleSettings) { super(id, settings); }
 ```
 
-As also explained in that other project, the control metadata should be typed as `object` for the time being (`static readonly metadata: object = { ... }`). Not typing it will lead to issues when inheriting from this control, as the TypeScript compiler will expect the same properties to be present in any derived control's metadata. But properties are inherited, so they should not be repeated.<br>
-As soon as the UI5 types come with a type for the metadata object, that type should be used instead, for best type-safety and code completion.
+As also explained in that other project, the control metadata should be typed as `MetadataOptions` (make sure to import it from `sap/ui/core/Element` in case of controls, or the closest base class in general - the metadata option structure is also defined for `Object`, `ManagedObject` and `Component`). This is available since UI5 version 1.110; for earlier versions simply use `object` instead:
+```ts
+import { MetadataOptions } from "sap/ui/core/Element";
+...
+static readonly metadata: MetadataOptions = { ... }
+```
+Typing it will give you type safety and code completion for this structure. Not typing it will lead to issues when inheriting from this control, as the TypeScript compiler will expect the same properties to be present in any derived control's metadata. But properties are inherited, so they should not be repeated.
 
 As also explained in that other project, the namespace of the control needs to be defined. In contrast to there, now an `@name` JSDoc tag with the *full* name is used:
 ```

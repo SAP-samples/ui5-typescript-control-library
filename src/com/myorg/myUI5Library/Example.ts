@@ -6,7 +6,7 @@
 import Control from "sap/ui/core/Control";
 import ExampleRenderer from "./ExampleRenderer";
 import { ExampleColor } from "./library";
-
+import { MetadataOptions } from "sap/ui/core/Element";
 
 
 /**
@@ -29,7 +29,7 @@ export default class Example extends Control {
 	constructor(id?: string, settings?: $ExampleSettings);
 	constructor(id?: string, settings?: $ExampleSettings) { super(id, settings); }
 
-	static readonly metadata: object = {
+	static readonly metadata: MetadataOptions = {
 		library: "com.myorg.myUI5Library",
 		properties: {
 			/**
