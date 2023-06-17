@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<library xmlns="http://www.sap.com/sap.ui.library.xsd">
+	<name>com.myorg.myui5lib</name>
+	<vendor>myorg</vendor>
+	<version>1.0.0</version>
+	<copyright>(c) 2023 com.myorg.myui5lib contributors</copyright>
+	<title>com.myorg.myui5lib</title>
+	<documentation>Some description about com.myorg.myui5lib</documentation>
+	<dependencies>
+		<dependency>
+			<libraryName>sap.ui.core</libraryName>
+		</dependency>
+	</dependencies>
+</library>

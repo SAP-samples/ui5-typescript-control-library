@@ -1,8 +1,8 @@
 node_modules/
+coverage/
 dist/
 package-lock.json
 .env
 
 .vscode/
-src-gen/
-test-gen/
+.DS_Store

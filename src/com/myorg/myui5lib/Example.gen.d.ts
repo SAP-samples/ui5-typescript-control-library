@@ -1,4 +1,4 @@
-import { ExampleColor } from "com/myorg/myUI5Library/library";
+import { ExampleColor } from "com/myorg/myui5lib/library";
 import Event from "sap/ui/base/Event";
 import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 import { $ControlSettings } from "sap/ui/core/Control";
