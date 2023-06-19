@@ -1,0 +1,16 @@
+specVersion: "3.0"
+metadata:
+  name: "com.myorg.myui5lib"
+type: library
+resources:
+  configuration:
+    paths:
+      src: dist/resources/com/myorg/myui5lib/
+      test: dist/test-resources/com/myorg/myui5lib/
+framework:
+  name: OpenUI5
+  version: "1.115.0"
+  libraries:
+    - name: sap.ui.core
+    - name: themelib_sap_fiori_3
+    - name: themelib_sap_horizon
