@@ -1,0 +1,7 @@
+# Ignore build output files
+coverage/*
+dist/*
+
+# files to format manually
+*.gen.d.ts
+README.md

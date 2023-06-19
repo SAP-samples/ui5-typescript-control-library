@@ -1,17 +1,17 @@
 {
-    "compilerOptions": {
-      "target": "es2022",
-      "module": "es2022",
-      "moduleResolution": "node",
-      "skipLibCheck": true,
-      "allowJs": true,
-      "strict": true,
-			"strictNullChecks": false,
-      "strictPropertyInitialization": false,
-      "rootDir": "./",
-      "paths": {
-        "com/myorg/myui5lib/*": ["./src/com/myorg/myui5lib/*"]
-      }
-    },
-    "include": ["./src/**/*", "./test/**/*"]
-  }
+	"compilerOptions": {
+		"target": "es2022",
+		"module": "es2022",
+		"moduleResolution": "node",
+		"skipLibCheck": true,
+		"allowJs": true,
+		"strict": true,
+		"strictNullChecks": false,
+		"strictPropertyInitialization": false,
+		"rootDir": "./",
+		"paths": {
+			"com/myorg/myui5lib/*": ["./src/com/myorg/myui5lib/*"]
+		}
+	},
+	"include": ["./src/**/*", "./test/**/*"]
+}

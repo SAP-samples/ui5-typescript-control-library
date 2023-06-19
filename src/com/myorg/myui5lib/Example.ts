@@ -8,7 +8,6 @@ import ExampleRenderer from "./ExampleRenderer";
 import { ExampleColor } from "./library";
 import type { MetadataOptions } from "sap/ui/core/Element";
 
-
 /**
  * Constructor for a new <code>com.myorg.myui5lib.Example</code> control.
  *
@@ -26,7 +25,9 @@ export default class Example extends Control {
 	// The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures
 	constructor(id?: string | $ExampleSettings);
 	constructor(id?: string, settings?: $ExampleSettings);
-	constructor(id?: string, settings?: $ExampleSettings) { super(id, settings); }
+	constructor(id?: string, settings?: $ExampleSettings) {
+		super(id, settings);
+	}
 
 	static readonly metadata: MetadataOptions = {
 		library: "com.myorg.myui5lib",
@@ -60,5 +61,5 @@ export default class Example extends Control {
 
 	onclick = () => {
 		this.firePress();
-	}
+	};
 }

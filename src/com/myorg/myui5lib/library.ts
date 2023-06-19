@@ -13,23 +13,20 @@ import ObjectPath from "sap/base/util/ObjectPath";
 sap.ui.getCore().initLibrary({
 	name: "com.myorg.myui5lib",
 	version: "${version}",
-	dependencies: [ // keep in sync with the ui5.yaml and .library files
+	dependencies: [
+		// keep in sync with the ui5.yaml and .library files
 		"sap.ui.core"
 	],
-	types: [
-		"com.myorg.myui5lib.ExampleColor"
-	],
+	types: ["com.myorg.myui5lib.ExampleColor"],
 	interfaces: [],
-	controls: [
-		"com.myorg.myui5lib.Example"
-	],
+	controls: ["com.myorg.myui5lib.Example"],
 	elements: [],
 	noLibraryCSS: false // if no CSS is provided, you can disable the library.css load here
 });
 
 // get the library object from global object space because all enums must be attached to it to be usable as UI5 types
 // FIXME: this line is planned to become obsolete and may need to be removed later
-const thisLib : {[key: string]: unknown} = ObjectPath.get("com.myorg.myui5lib") as {[key: string]: unknown};
+const thisLib: { [key: string]: unknown } = ObjectPath.get("com.myorg.myui5lib") as { [key: string]: unknown };
 
 /**
  * Semantic Colors of the com.myorg.myui5lib.Example control.
@@ -38,7 +35,6 @@ const thisLib : {[key: string]: unknown} = ObjectPath.get("com.myorg.myui5lib") 
  * @public
  */
 export enum ExampleColor {
-
 	/**
 	 * Default color (brand color)
 	 * @public
@@ -50,7 +46,6 @@ export enum ExampleColor {
 	 * @public
 	 */
 	Highlight = "Highlight"
-
 }
 // FIXME: this line is planned to become obsolete and may need to be removed later
 thisLib.ExampleColor = ExampleColor; // add the enum to the library; this is important because UI5 otherwise cannot identify the type and will skip type checking for properties of this type

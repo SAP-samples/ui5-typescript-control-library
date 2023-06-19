@@ -18,11 +18,10 @@ export default {
 	/**
 	 * Renders the HTML for the given control, using the provided {@link RenderManager}.
 	 *
-	 * @param {RenderManager} rm The reference to the <code>sap.ui.core.RenderManager</code>
-	 * @param {Example} control The control instance to be rendered
+	 * @param rm The reference to the <code>sap.ui.core.RenderManager</code>
+	 * @param control The control instance to be rendered
 	 */
 	render: function (rm: RenderManager, control: Example) {
-
 		const i18n = Core.getLibraryResourceBundle("com.myorg.myui5lib") as ResourceBundle;
 
 		rm.openStart("div", control);
@@ -31,9 +30,8 @@ export default {
 		} else {
 			rm.class("myLibPrefixExample");
 		}
-		rm.openEnd( );
+		rm.openEnd();
 		rm.text(`${i18n.getText("ANY_TEXT")}: ${control.getText()}`);
 		rm.close("div");
 	}
-
 };

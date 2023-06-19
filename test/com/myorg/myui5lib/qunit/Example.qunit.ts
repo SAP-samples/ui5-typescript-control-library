@@ -31,7 +31,7 @@ QUnit.module("Basic Control Checks");
 QUnit.test("Test get properties", function (assert) {
 	assert.expect(2);
 	const oExample = new Example({
-		text: "Example",
+		text: "Example"
 	});
 	assert.equal(oExample.getText(), "Example", "Check text equals 'Example'");
 	assert.equal(oExample.getColor(), ExampleColor.Default, "Check color equals 'Default'");
@@ -44,7 +44,7 @@ QUnit.test("Test click event", function (assert) {
 		text: "Example",
 		press: function () {
 			assert.ok(true, "Event has been fired!");
-		},
+		}
 	}).placeAt("uiArea1");
 	return new Promise(function (resolve /*, reject */) {
 		setTimeout(function () {
