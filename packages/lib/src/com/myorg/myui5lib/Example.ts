@@ -7,6 +7,7 @@ import Control from "sap/ui/core/Control";
 import ExampleRenderer from "./ExampleRenderer";
 import { ExampleColor } from "./library";
 import type { MetadataOptions } from "sap/ui/core/Element";
+import { URLHelper } from "sap/m/library";
 
 /**
  * Constructor for a new <code>com.myorg.myui5lib.Example</code> control.
@@ -57,9 +58,10 @@ export default class Example extends Control {
 		}
 	};
 
-	static renderer: typeof ExampleRenderer = ExampleRenderer;
+	static renderer = ExampleRenderer;
 
 	onclick = () => {
 		this.firePress();
+		URLHelper.redirect("")
 	};
 }
