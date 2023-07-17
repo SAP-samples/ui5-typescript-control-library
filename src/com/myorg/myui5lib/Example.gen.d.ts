@@ -1,5 +1,5 @@
-import { ExampleColor } from "com/myorg/myui5lib/library";
 import Event from "sap/ui/base/Event";
+import { ExampleColor } from "com/myorg/myui5lib/library";
 import { PropertyBindingInfo } from "sap/ui/base/ManagedObject";
 import { $ControlSettings } from "sap/ui/core/Control";
 
@@ -23,7 +23,7 @@ declare module "./Example" {
         /**
          * Event is fired when the user clicks the control.
          */
-        press?: (event: Event) => void;
+        press?: (event: Example$PressEvent) => void;
     }
 
     export default interface Example {
@@ -91,7 +91,7 @@ declare module "./Example" {
          *
          * @returns Reference to "this" in order to allow method chaining
          */
-        attachPress(fn: (event: Event) => void, listener?: object): this;
+        attachPress(fn: (event: Example$PressEvent) => void, listener?: object): this;
 
         /**
          * Attaches event handler "fn" to the "press" event of this "Example".
@@ -107,7 +107,7 @@ declare module "./Example" {
          *
          * @returns Reference to "this" in order to allow method chaining
          */
-        attachPress<CustomDataType extends object>(data: CustomDataType, fn: (event: Event, data: CustomDataType) => void, listener?: object): this;
+        attachPress<CustomDataType extends object>(data: CustomDataType, fn: (event: Example$PressEvent, data: CustomDataType) => void, listener?: object): this;
 
         /**
          * Detaches event handler "fn" from the "press" event of this "Example".
@@ -120,7 +120,7 @@ declare module "./Example" {
          * @param listener Context object on which the given function had to be called
          * @returns Reference to "this" in order to allow method chaining
          */
-        detachPress(fn: (event: Event) => void, listener?: object): this;
+        detachPress(fn: (event: Example$PressEvent) => void, listener?: object): this;
 
         /**
          * Fires event "press" to attached listeners.
@@ -130,6 +130,20 @@ declare module "./Example" {
          * @param parameters Parameters to pass along with the event
          * @returns Reference to "this" in order to allow method chaining
          */
-        firePress(parameters?: object): this;
+        firePress(parameters?: Example$PressEventParameters): this;
     }
+
+    /**
+     * Interface describing the parameters of Example's 'press' event.
+     * Event is fired when the user clicks the control.
+     */
+    // eslint-disable-next-line
+    export interface Example$PressEventParameters {
+    }
+
+    /**
+     * Type describing the Example's 'press' event.
+     * Event is fired when the user clicks the control.
+     */
+    export type Example$PressEvent = Event<Example$PressEventParameters>;
 }
