@@ -13,6 +13,7 @@
 		"clean": "rimraf dist coverage",
 		"build": "npm run build:ts-interfaces && ui5 build --clean-dest",
 		"build:ts-interfaces": "npx @ui5/ts-interface-generator",
+		"build:jsdoc": "ui5 build jsdoc --config ui5-jsdoc.yaml --exclude-task buildThemes",
 		"start": "run-p 'build:ts-interfaces -- --watch' start:server",
 		"start:server": "ui5 serve --port 8080 -o test-resources/com/myorg/myui5lib/Example.html",
 		"start:dist": "ui5 serve  --port 8080 -o test-resources/com/myorg/myui5lib/Example.html --config ui5-dist.yaml",

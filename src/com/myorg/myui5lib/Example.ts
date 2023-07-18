@@ -12,7 +12,7 @@ import type { MetadataOptions } from "sap/ui/core/Element";
  * Constructor for a new <code>com.myorg.myui5lib.Example</code> control.
  *
  * Some class description goes here.
- * @extends Control
+ * @extends sap.ui.core.Control
  *
  * @author OpenUI5 Team
  * @version ${version}
