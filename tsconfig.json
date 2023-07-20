@@ -1,6 +1,5 @@
 {
 	"compilerOptions": {
-		"target": "es2022",
 		"module": "es2022",
 		"moduleResolution": "node",
 		"skipLibCheck": true,
@@ -10,8 +9,8 @@
 		"strictPropertyInitialization": false,
 		"rootDir": "./",
 		"paths": {
-			"com/myorg/myui5lib/*": ["./src/com/myorg/myui5lib/*"]
+			"com/myorg/myui5lib/*": ["./src/*"]
 		}
 	},
-	"include": ["./src/**/*", "./test/**/*"]
+	"include": ["./src/**/*", "test/**/*"]
 }
