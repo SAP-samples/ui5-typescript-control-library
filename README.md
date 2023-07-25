@@ -78,7 +78,7 @@ To make references using the library name work, a path mapping needs to be confi
 ```json
 "paths": {
 	"com/myorg/myui5lib/*": [
-		"./src/com/myorg/myui5lib/*"
+		"./src/*"
 	]
 }
 ```
