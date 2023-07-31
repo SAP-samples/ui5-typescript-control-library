@@ -6,6 +6,10 @@ module.exports = function (config) {
 			"src/**/*.ts": ["ui5-transpile"],
 			"test/**/*.ts": ["ui5-transpile"]
 		},
+		proxies: {
+			'/resources/com/myorg/myui5lib/': '/base/src/',
+			'/test-resources/com/myorg/myui5lib/': '/base/test/',
+		},
 		coverageReporter: {
 			dir: "coverage",
 			reporters: [
